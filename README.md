@@ -7,13 +7,13 @@ Generating container images for any purpose.
 Add a tag to for dockerfile:
 
 ```sh
-git tag build/go/v0.1.0
+git tag build/go/1.27.3
 ```
 
 And push it to the remote:
 
 ```sh
-git push origin build/go/v0.1.0
+git push origin build/go/1.27.3
 ```
 
 <details><summary>Local Usage</summary>
@@ -21,11 +21,11 @@ git push origin build/go/v0.1.0
 Give an dockerfile to `--build` parameter:
 
 ```sh
-./build.sh --prefix rakunlabs --build ./images/build/go.Dockerfile --version v0.1.0 --latest --push
+./build.sh --prefix rakunlabs --build ./images/build/go.Dockerfile --version 1.27.3 --latest --push
 ```
 
 Image names:  
-  `rakunlabs/build/go:0.1.0` -> version in dockerfile  
+  `rakunlabs/build/go:1.27.3` -> `--version`, the Go version in `FROM` for go  
   `rakunlabs/build/go:latest` -> _--latest_ option is used
 
 `assets` folder near the Dockerfile.
